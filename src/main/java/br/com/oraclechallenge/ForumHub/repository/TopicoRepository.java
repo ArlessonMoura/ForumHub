@@ -1,6 +1,6 @@
 package br.com.oraclechallenge.ForumHub.repository;
 
-import br.com.araujo.jonas.ForumHub.domain.TopicoDomain;
+import br.com.oraclechallenge.ForumHub.domain.TopicoDomain;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;

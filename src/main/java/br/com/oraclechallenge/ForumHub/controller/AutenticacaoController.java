@@ -1,10 +1,10 @@
 package br.com.oraclechallenge.ForumHub.controller;
 
-import br.com.araujo.jonas.ForumHub.domain.DataAuthentication;
-import br.com.araujo.jonas.ForumHub.domain.UsuarioDomain;
-import br.com.araujo.jonas.ForumHub.infra.security.DataTokenJWT;
-import br.com.araujo.jonas.ForumHub.repository.UsuarioRepository;
-import br.com.araujo.jonas.ForumHub.service.security.TokenService;
+import br.com.oraclechallenge.ForumHub.domain.DataAuthentication;
+import br.com.oraclechallenge.ForumHub.domain.UsuarioDomain;
+import br.com.oraclechallenge.ForumHub.infra.security.DataTokenJWT;
+import br.com.oraclechallenge.ForumHub.repository.UsuarioRepository;
+import br.com.oraclechallenge.ForumHub.service.security.TokenService;
 import jakarta.validation.Valid;
 import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;

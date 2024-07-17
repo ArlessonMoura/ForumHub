@@ -1,7 +1,7 @@
 package br.com.oraclechallenge.ForumHub.infra.security;
 
-import br.com.araujo.jonas.ForumHub.repository.UsuarioDetailsRepository;
-import br.com.araujo.jonas.ForumHub.service.security.TokenService;
+import br.com.oraclechallenge.ForumHub.repository.UsuarioDetailsRepository;
+import br.com.oraclechallenge.ForumHub.service.security.TokenService;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;

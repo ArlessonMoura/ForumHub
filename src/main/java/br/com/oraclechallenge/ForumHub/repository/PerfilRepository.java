@@ -1,6 +1,6 @@
 package br.com.oraclechallenge.ForumHub.repository;
 
-import br.com.araujo.jonas.ForumHub.domain.PerfilDomain;
+import br.com.oraclechallenge.ForumHub.domain.PerfilDomain;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Optional;

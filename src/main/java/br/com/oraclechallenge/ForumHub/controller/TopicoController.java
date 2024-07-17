@@ -1,9 +1,9 @@
 package br.com.oraclechallenge.ForumHub.controller;
 
-import br.com.araujo.jonas.ForumHub.domain.TopicoDomain;
-import br.com.araujo.jonas.ForumHub.http.request.CriarTopicoRequest;
-import br.com.araujo.jonas.ForumHub.model.DetalheTopico;
-import br.com.araujo.jonas.ForumHub.service.TopicoService;
+import br.com.oraclechallenge.ForumHub.domain.TopicoDomain;
+import br.com.oraclechallenge.ForumHub.http.request.CriarTopicoRequest;
+import br.com.oraclechallenge.ForumHub.model.DetalheTopico;
+import br.com.oraclechallenge.ForumHub.service.TopicoService;
 import jakarta.validation.Valid;
 import lombok.AllArgsConstructor;
 import org.springframework.data.domain.Page;

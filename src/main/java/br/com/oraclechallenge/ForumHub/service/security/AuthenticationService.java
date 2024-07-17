@@ -1,6 +1,6 @@
 package br.com.oraclechallenge.ForumHub.service.security;
 
-import br.com.araujo.jonas.ForumHub.repository.UsuarioDetailsRepository;
+import br.com.oraclechallenge.ForumHub.repository.UsuarioDetailsRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
