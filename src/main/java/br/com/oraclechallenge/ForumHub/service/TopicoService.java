@@ -1,12 +1,13 @@
 package br.com.oraclechallenge.ForumHub.service;
 
-import br.com.oraclechallenge.ForumHub.domain.TopicoDomain;
-import br.com.oraclechallenge.ForumHub.http.request.CriarTopicoRequest;
-import br.com.oraclechallenge.ForumHub.infra.DataAlreadyRegisteredException;
-import br.com.oraclechallenge.ForumHub.repository.CursoRepository;
-import br.com.oraclechallenge.ForumHub.repository.PerfilRepository;
-import br.com.oraclechallenge.ForumHub.repository.TopicoRepository;
-import br.com.oraclechallenge.ForumHub.repository.UsuarioRepository;
+import br.com.araujo.jonas.ForumHub.domain.TopicoDomain;
+import br.com.araujo.jonas.ForumHub.http.request.CriarTopicoRequest;
+import br.com.araujo.jonas.ForumHub.infra.exception.DataAlreadyRegisteredException;
+import br.com.araujo.jonas.ForumHub.model.DetalheTopico;
+import br.com.araujo.jonas.ForumHub.repository.CursoRepository;
+import br.com.araujo.jonas.ForumHub.repository.PerfilRepository;
+import br.com.araujo.jonas.ForumHub.repository.TopicoRepository;
+import br.com.araujo.jonas.ForumHub.repository.UsuarioRepository;
 import jakarta.persistence.NoResultException;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
@@ -32,7 +33,7 @@ public class TopicoService {
     public TopicoDomain criar(CriarTopicoRequest request) {
         validarJaCadastradoTituloMensagem(request);
 
-        var perfil = perfilRepository.findByName("Jonas")
+        var perfil = perfilRepository.findByNome("Jonas")
                 .orElseThrow(() -> new NoResultException("Não encontrei"));
 
 
@@ -93,21 +94,14 @@ public class TopicoService {
         return repository.findByCursoNomeAndAno(nomeCurso, ano, pageable);
     }
 
-//    public Page<TopicoDomain> listar(ListTopicoQuery query, Pageable pageable){
-//        return repository.findAll(
-//                getSpecification(query),
-//                pageable
-//        );
-//    }
-//
-//    private Specification<TopicoDomain> getSpecification(ListTopicoQuery topicoQuery) {
-//        return ((root, query, builder) -> {
-//            List<Predicate> predicates = new ArrayList<>();
-//
-//            Join<CursoDomain> cursoJoin = root.join("id");
-//            predicates.add(builder.equal(cursoJoin.get("cursoId"), query.get))
-//        })
-//    }
+    public DetalheTopico listarDetalheTopico(Long id) {
+        var topico = repository.findById(id);
+
+        if (!topico.isPresent()) {
+            throw new NoResultException("Tópico não encontrado.");
+        }
+        return new DetalheTopico(topico.get(), "Detalhes do tópico");
+    }
 
     private void validarJaCadastradoTituloMensagem(CriarTopicoRequest request) {
         if (repository.findByTituloAndMensagem(request.getTitulo(), request.getMensagem())) {
