@@ -1,6 +1,6 @@
 package br.com.oraclechallenge.ForumHub.service.security;
 
-import br.com.araujo.jonas.ForumHub.domain.UsuarioDomain;
+import br.com.oraclechallenge.ForumHub.domain.UsuarioDomain;
 import com.auth0.jwt.JWT;
 import com.auth0.jwt.algorithms.Algorithm;
 import com.auth0.jwt.exceptions.JWTCreationException;
