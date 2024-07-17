@@ -1,4 +1,4 @@
-package br.com.oraclechallenge.ForumHub.infra;
+package br.com.oraclechallenge.ForumHub.infra.exception;
 
 public class DataAlreadyRegisteredException extends RuntimeException {
     public DataAlreadyRegisteredException(String message) {

@@ -1,13 +1,13 @@
 package br.com.oraclechallenge.ForumHub.service;
 
-import br.com.araujo.jonas.ForumHub.domain.TopicoDomain;
-import br.com.araujo.jonas.ForumHub.http.request.CriarTopicoRequest;
-import br.com.araujo.jonas.ForumHub.infra.exception.DataAlreadyRegisteredException;
-import br.com.araujo.jonas.ForumHub.model.DetalheTopico;
-import br.com.araujo.jonas.ForumHub.repository.CursoRepository;
-import br.com.araujo.jonas.ForumHub.repository.PerfilRepository;
-import br.com.araujo.jonas.ForumHub.repository.TopicoRepository;
-import br.com.araujo.jonas.ForumHub.repository.UsuarioRepository;
+import br.com.oraclechallenge.ForumHub.domain.TopicoDomain;
+import br.com.oraclechallenge.ForumHub.http.request.CriarTopicoRequest;
+import br.com.oraclechallenge.ForumHub.infra.exception.DataAlreadyRegisteredException;
+import br.com.oraclechallenge.ForumHub.model.DetalheTopico;
+import br.com.oraclechallenge.ForumHub.repository.CursoRepository;
+import br.com.oraclechallenge.ForumHub.repository.PerfilRepository;
+import br.com.oraclechallenge.ForumHub.repository.TopicoRepository;
+import br.com.oraclechallenge.ForumHub.repository.UsuarioRepository;
 import jakarta.persistence.NoResultException;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
